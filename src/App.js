@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import SignUp from './components/signup/SignUp';
+import Login from './components/login/Login';
+import AuthService from './services/AuthService';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -11,10 +14,18 @@ class App extends React.Component {
       ready: false,
       signupShowing: false,
       loginShowing: false,
-    }
+    };
+
+    this.service = new AuthService();
+
+  }
+
+  render() {
+    console.log('+_+_+_+_+_+_+_+_+_+', this.state);
     return (
-      <div className="App">
+      <div>
         <SignUp />
+        <Login />
       </div>
     );
   }

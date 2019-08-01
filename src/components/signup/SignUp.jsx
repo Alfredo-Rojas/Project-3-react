@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import AuthService from "../../services/AuthService";
-import { FormControl } from "@material-ui/core";
 
 class SignUp extends Component {
   constructor(props) {

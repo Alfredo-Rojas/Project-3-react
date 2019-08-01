@@ -15,7 +15,7 @@ class Login extends Component {
   tryToLogin = e => {
     e.preventDefault();
     const uName = this.state.usernameInput;
-    const pword = this.state.passwordInput;
+    const pWord = this.state.passwordInput;
 
     this.service.login(uName, pWord).then(() => {
       this.props.toggleForm("login");
@@ -41,6 +41,8 @@ class Login extends Component {
           name="passwordInput"
           onChange={this.handleChange}
         />
+
+        <button>Submit</button>
       </form>
     );
   }
