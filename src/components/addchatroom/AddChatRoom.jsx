@@ -23,7 +23,7 @@ class AddChatRoom extends Component {
       )
       .then(() => {
         this.props.getData();
-        // This functio updates the list in ProjectIndex.js
+        // This functio updates the list in ChatRoomIndex.js
         this.setState({
           newTitle: "",
           newDescription: ""
@@ -39,7 +39,7 @@ class AddChatRoom extends Component {
 
   render() {
     return (
-      <div className="add-project">
+      <div className="add-chatroom">
         <form inSubmit={this.handleFormSubmit}>
           <label>Title:</label>
           <input
