@@ -3,6 +3,7 @@ import './App.css';
 import SignUp from './components/signup/SignUp';
 import Login from './components/login/Login';
 import AuthService from './services/AuthService';
+import NavBar from './components/navbar/NavBar';
 
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
     console.log('+_+_+_+_+_+_+_+_+_+', this.state);
     return (
       <div>
+        <NavBar />
         <SignUp />
         <Login />
       </div>
