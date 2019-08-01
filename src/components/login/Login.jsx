@@ -9,6 +9,8 @@ class Login extends Component {
   }
 
   handleChange = e => {
+    console.log(e.target);
+
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -31,7 +33,7 @@ class Login extends Component {
         <legend>Username</legend>
         <input
           value={this.state.usernameInput}
-          name="usernameInpit"
+          name="usernameInput"
           onChange={this.handleChange}
         />
 

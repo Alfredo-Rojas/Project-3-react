@@ -4,11 +4,13 @@ import AuthService from "../../services/AuthService";
 class SignUp extends Component {
   constructor(props) {
     super(props);
-    this.state = { username: "", passwordInput: "" };
+    this.state = { usernameInput: "", passwordInput: "" };
     this.service = new AuthService();
   }
 
   handleChange = e => {
+    console.log("----- ", e.target);
+
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -32,7 +34,7 @@ class SignUp extends Component {
 
         <legend>Username</legend>
         <input
-          value={this.state.passwordInput}
+          value={this.state.usernameInput}
           name="usernameInput"
           onChange={this.handleChange}
         />
